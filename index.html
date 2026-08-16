@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A Little Story About You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<main>
+<section class="hero reveal">
+  <p class="eyebrow">A little something, made just for you</p>
+  <h1>Happy Birthday,<br><em>Someone Special.</em></h1>
+  <p class="sub">Some people enter your life quietly.<br>Then somehow, they become one of your favorite parts of it.</p>
+  <button class="scroll" onclick="document.querySelector('#story').scrollIntoView({behavior:'smooth'})">Begin our story <span>↓</span></button>
+</section>
+
+<section id="story" class="story reveal">
+  <span class="number">01</span>
+  <p class="eyebrow">The beginning</p>
+  <h2>Before you,<br>I didn't know <em>this story</em> was coming.</h2>
+  <p class="copy">There was a time when today was just another day. Then I met you, and ordinary moments started carrying a little more meaning.</p>
+</section>
+
+<section class="memory reveal">
+  <div class="memory-card"><span>YOUR MEMORY</span><div>✦</div><small>Replace this with your favorite photo</small></div>
+  <div class="memory-text"><span class="number">02</span><p class="eyebrow">The moments</p><h2>It's the little things<br>I'll <em>always remember.</em></h2><p class="copy">The conversations that lasted longer than planned. The random laughs. The moments that seemed small at the time but became memories worth keeping.</p></div>
+</section>
+
+<section class="reasons reveal">
+  <span class="number">03</span><p class="eyebrow">Why you matter</p><h2>There are a hundred reasons.<br>Here are <em>just a few.</em></h2>
+  <div class="reason-grid"><article><b>01</b><h3>Your presence</h3><p>You have a way of making even normal days feel different.</p></article><article><b>02</b><h3>Your heart</h3><p>The kindness you carry is something I hope you never lose.</p></article><article><b>03</b><h3>Your smile</h3><p>Somehow, it still has the power to make everything feel lighter.</p></article></div>
+</section>
+
+<section class="letter reveal">
+  <p class="eyebrow">A letter for you</p>
+  <h2>If I could give you<br>one thing today...</h2>
+  <div class="letter-paper"><p>I'd give you a way to see yourself through the eyes of the people who care about you.</p><p>You deserve beautiful days, honest laughter, people who choose you, and every little happiness you've been wishing for.</p><p>Happy Birthday. I'm really glad you exist.</p><span>— from someone who cares ❤️</span></div>
+</section>
+
+<section class="ending reveal">
+  <p class="eyebrow">And finally...</p>
+  <h2>Here's to another year<br>of <em>you.</em></h2>
+  <p>More memories. More laughter. More moments we don't know will matter until we look back.</p>
+  <div class="heart">♡</div>
+  <small>Made with intention, not just code.</small>
+</section>
+</main>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));</script>
+</body>
+</html>
