@@ -24,6 +24,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Prepare music assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for path in Path('.').rglob('index.html'):
+              text = path.read_text(encoding='utf-8')
+              if 'music.js' not in text:
+                  text = text.replace('</head>', '<link rel="stylesheet" href="music.css"></head>', 1)
+                  text = text.replace('</body>', '<script src="music.js"></script></body>', 1)
+                  path.write_text(text, encoding='utf-8')
+          PY
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
