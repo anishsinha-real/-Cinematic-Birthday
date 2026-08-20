@@ -1,0 +1,36 @@
+.sound-toggle {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .06);
+  color: rgba(255, 255, 255, .72);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 15px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  backdrop-filter: blur(12px);
+  transition: transform .3s ease, background .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease;
+}
+
+.sound-toggle:hover {
+  transform: scale(1.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, .3);
+}
+
+.sound-toggle.active {
+  color: #fff;
+  background: rgba(231, 169, 255, .14);
+  border-color: rgba(231, 169, 255, .45);
+  box-shadow: 0 0 25px rgba(231, 169, 255, .12);
+}
+
+@media (max-width: 700px) {
+  .sound-toggle { width: 34px; height: 34px; flex-basis: 34px; }
+}
