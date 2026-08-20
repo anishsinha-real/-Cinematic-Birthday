@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#100b18" />
+  <title>For My Favorite Idiot — Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="music.css" />
+</head>
+<body>
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
+  <div class="noise"></div>
+  <div id="fx" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">made with feelings <span>♡</span></div>
+    <div class="progress-wrap">
+      <div class="progress"><i id="progressFill"></i></div>
+      <span id="counter">01 / 07</span>
+    </div>
+    <button class="sound-toggle" id="soundToggle" type="button" aria-label="Toggle music" aria-pressed="false">♪</button>
+  </header>
+
+  <main id="story" aria-live="polite">
+    <div class="track" id="track">
+      <section class="scene hero active" data-scene="0">
+        <div class="scene-content center">
+          <p class="eyebrow reveal">A birthday message for my favorite idiot</p>
+          <h1 class="reveal">Happy Birthday,<br /><em>best friend.</em></h1>
+          <p class="lead reveal">You thought you'd get a normal birthday wish?</p>
+          <p class="script reveal">Yeah... absolutely not.</p>
+          <button class="pill reveal" data-next type="button">Okay, show me <span>→</span></button>
+        </div>
+      </section>
+
+      <section class="scene" data-scene="1">
+        <div class="scene-content split">
+          <div>
+            <p class="eyebrow">01 · Somehow it happened</p>
+            <h2 class="reveal">Out of all the people in the world, I somehow got <em>you.</em></h2>
+            <p class="body-copy reveal">And honestly? That's one of those things I wouldn't trade for anything. Somewhere between random conversations, stupid jokes and “bro, listen to this”, you stopped being just a friend.</p>
+          </div>
+          <div class="memory-card reveal">
+            <span class="memory-number">01</span>
+            <div class="memory-symbol">✦</div>
+            <p>the beginning of<br /><strong>the chaos</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene" data-scene="2">
+        <div class="scene-content">
+          <p class="eyebrow">02 · The important stuff</p>
+          <h2 class="reveal">You make ordinary days feel <em>less ordinary.</em></h2>
+          <div class="reasons reveal">
+            <article><b>01</b><h3>The laughs</h3><p>Even the dumbest joke somehow becomes funny when it's ours.</p></article>
+            <article><b>02</b><h3>The chaos</h3><p>Normal people have conversations. We somehow create side quests.</p></article>
+            <article><b>03</b><h3>The presence</h3><p>You don't always need to say anything. You're just there. And that matters.</p></article>
+          </div>
+          <button class="pill ghost reveal" data-next type="button">There's more <span>↓</span></button>
+        </div>
+      </section>
+
+      <section class="scene" data-scene="3">
+        <div class="scene-content center">
+          <p class="eyebrow">03 · A tiny challenge</p>
+          <h2 class="reveal">Tap the stars.<br /><em>Obviously.</em></h2>
+          <p class="body-copy reveal">Because apparently a birthday message wasn't enough. I had to hide a little surprise in it.</p>
+          <div class="star-field reveal" id="starField" aria-label="Tap the stars"></div>
+          <p class="hint" id="starHint">0 / 5 found</p>
+        </div>
+      </section>
+
+      <section class="scene" data-scene="4">
+        <div class="scene-content center">
+          <p class="eyebrow">04 · Okay, enough jokes</p>
+          <h2 class="reveal">For real though...</h2>
+          <div class="letter-preview reveal">
+            <div class="seal">♡</div>
+            <div class="letter-lines"></div>
+            <button class="pill" id="openLetter" type="button">Open the letter <span>→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene" data-scene="5">
+        <div class="scene-content center">
+          <p class="eyebrow">05 · From me to you</p>
+          <div class="letter reveal" id="letter">
+            <p class="script">Dear idiot,</p>
+            <p>Thank you for being one of the people who makes life a little easier, a little louder and a lot more memorable.</p>
+            <p>I hope this year brings you the kind of happiness you keep giving to everyone around you. Chase the things you want. Laugh way too much. Take the risks. Make ridiculous memories.</p>
+            <p>And whenever life gets messy, remember that you've got someone in your corner.</p>
+            <p class="script sign">— your equally stupid best friend ♡</p>
+          </div>
+          <button class="pill reveal" data-next type="button">One last thing <span>→</span></button>
+        </div>
+      </section>
+
+      <section class="scene final" data-scene="6">
+        <div class="scene-content center">
+          <p class="eyebrow reveal">06 · Fade out</p>
+          <div class="final-star reveal">✦</div>
+          <h2 class="reveal">Here's to another year<br />of <em>you.</em></h2>
+          <p class="lead reveal">More memories. More chaos. More reasons to say, “remember when...?”</p>
+          <p class="script reveal">Happy Birthday, best friend. ♡</p>
+          <button class="pill ghost reveal" id="restart" type="button">↻ Replay</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav class="dots" id="dots" aria-label="Story navigation"></nav>
+
+  <audio id="bgMusic" src="music2.mp3" loop preload="auto" playsinline></audio>
+
+  <script src="effects.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="music.js" defer></script>
+</body>
+</html>
